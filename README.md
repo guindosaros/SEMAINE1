@@ -8,7 +8,7 @@
    * Quiz
    * Question
    * Reponse
-   * Note
+   * Resultat
    
 ### Creation des champs des Models :
 ```python
@@ -50,8 +50,21 @@
     status = models.BooleanField(default=True)
     question_id = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='question_reponse')
        
-       
-
+class Choix(models.Model):
+      user_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='user_choix')
+      question_id = models.ForeignKey(Question,on_delete=models.CASCADE, related_name='user_choix')
+      reponse_id = models.ForeignKey(Reponse,on_delete=models.CASCADE, related_name='choix_reponse')
+      
+class Resultat(models.Model):
+      note_totale = models.IntegerField(max_length=3)
+      user_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='user_note')
+      quiz_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='quiz_resultat')
+      a_valider = models.BooleanField(default=False)
+      date_add = models.DateTimeField(auto_now_add=True)
+      date_upd = models.DateTimeField(auto_now=True)
+      
+      
+      
 
 
 
