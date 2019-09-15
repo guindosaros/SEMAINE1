@@ -61,13 +61,11 @@ class Note(models.Model):
       
 
 ```
-### Explications :
-   * Un theme a plusieur Quiz l'utilisateur peut selectionner un theme et passer different Quiz sur le theme
-   * A la creation d'un quiz on donne le nombre qu'il faut pour valider le quiz et le temps de duree du quiz et Aussi le Nombre de Questions du quiz
-   * Chaque question creé est a attribué a un Quiz et Prend une reponse que l'on creé dans le models reponse chaque reponse a un point pour une reponse fausse ou une bonne reponse 
-   * Après Avoir passer un Quiz nous Avons une Note qui represente Notre resultat notetotal est la somme des point des reponse de chaque question d'un qui a_valider prend un Boolean si la note totale est superieur ou egale a la note de validation du quiz a valider devienst true et le resulat est valider 
-   * 
-   * 
+### Explications de models Quiz  :
+* un thème a plusieurs Quiz l'utilisateur peut sélectionner un thème et passer différent Quiz sur le thème
+* A la création d'un quiz on donne le nombre qu'il faut pour valider le quiz et le temps de durée du quiz et Aussi le Nombre de Questions du quiz
+* Chaque question crée est  attribué a un Quiz et Prend une réponse que l'on crée dans le models réponse chaque réponse a un point pour une reponse fausse ou une bonne reponse 
+* Après Avoir passer un Quiz nous Avons une Note qui représente Notre resultat notetotal est la somme des point des réponse de chaque question d'un qui a_valider prend un Boolean si la note totale est superieur ou egale a la note de validation du quiz a valider devient true et le resulat  de la note est valider 
 
 
 
