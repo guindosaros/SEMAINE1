@@ -4,11 +4,11 @@
 
 ### Models :
    * Users
-   * Theme
+   * Themes
    * Quiz
-   * Question
-   * Reponse
-   * Note
+   * Questions
+   * Reponses
+   * Notes
    
 ### Creation des champs des Models :
 ```python
@@ -16,7 +16,7 @@
  class Users:
       "" Class Users de Django ""
    
- class Theme(models.Model):
+ class Themes(models.Model):
    titre =  models.CharField(max_length=100)
    description = models.TextField()
    status = models.BooleanField(default=True)
@@ -35,7 +35,7 @@
     temps = models.DurationField()
     theme_id = models.ForeignKey(Theme,on_delete=models.CASCADE, related_name='theme_quiz')
      
-  class Question(models.Model):
+  class Questions (models.Model):
     enoncet = models.TextField()
     date_add = models.DateTimeField(auto_now_add=True)
     date_upd = models.DateTimeField(auto_now=True)
@@ -43,7 +43,7 @@
     image_theme = models.ImageField(upload_to='question', blank=True)
     quiz_id  = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='quiz_question')
         
- class Reponse(models.Model):
+ class Reponses (models.Model):
    reponse = models.TextField()
    point = models.IntegerField(max_length=2)
    date_add = models.DateTimeField(auto_now_add=True)
@@ -51,7 +51,7 @@
    status = models.BooleanField(default=True)
    question_id = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='question_reponse')
    
-class Note(models.Model):
+class Notes (models.Model):
   note_totale = models.IntegerField(max_length=3)
   user_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='user_note')
   quiz_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='quiz_resultat')
