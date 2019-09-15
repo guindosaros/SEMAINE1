@@ -32,6 +32,7 @@
      note_validation = models.IntegerField(max_length=3)
      date_add = models.DateTimeField(auto_now_add=True)
      date_upd = models.DateTimeField(auto_now=True)
+     duree = models.DurationField()
      theme_id = models.ForeignKey(Theme,on_delete=models.CASCADE, related_name='theme_du_quiz')
      
   class Question(models.Model):
