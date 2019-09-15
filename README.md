@@ -15,7 +15,16 @@
    class Users:
       "" Class Users de Django ""
    
-
+   class Theme(models.Model):
+     titre =  models.CharField(max_length=100)
+     description = models.TextField()
+     status = models.BooleanField(default=True)
+     date_add =  models.DateTimeField(auto_now_add=True)
+     date_upd =  models.DateTimeField(auto_now=True)
+     imageTheme = models.ImageField(upload_to='theme', blank=True
+     
+  class Quiz(models.Model):
+  
 
 
 
