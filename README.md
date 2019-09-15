@@ -61,7 +61,7 @@ class Notes (models.Model):
       
 
 ```
-### Explications de models Quiz  :
+### Explications de mon  models Quiz  :
 * un thème a plusieurs Quiz l'utilisateur peut sélectionner un thème et passer différent Quiz sur le thème
 * A la création d'un quiz on donne le nombre qu'il faut pour valider le quiz et le temps de durée du quiz et Aussi le Nombre de Questions du quiz
 * Chaque question crée est  attribué a un Quiz et Prend une réponse que l'on crée dans le models réponse chaque réponse a un point pour une reponse fausse ou une bonne reponse 
