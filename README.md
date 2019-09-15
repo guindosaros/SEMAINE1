@@ -13,16 +13,16 @@
 ### Creation des champs des Models :
 ```python
 
-   class Users:
+ class Users:
       "" Class Users de Django ""
    
-   class Theme(models.Model):
-     titre =  models.CharField(max_length=100)
-     description = models.TextField()
-     status = models.BooleanField(default=True)
-     date_add =  models.DateTimeField(auto_now_add=True)
-     date_upd =  models.DateTimeField(auto_now=True)
-     image_theme = models.ImageField(upload_to='theme', blank=True)
+ class Theme(models.Model):
+   titre =  models.CharField(max_length=100)
+   description = models.TextField()
+   status = models.BooleanField(default=True)
+   date_add =  models.DateTimeField(auto_now_add=True)
+   date_upd =  models.DateTimeField(auto_now=True)
+   image_theme = models.ImageField(upload_to='theme', blank=True)
      
   class Quiz(models.Model):
     titre =  models.CharField( max_length = 100 )
