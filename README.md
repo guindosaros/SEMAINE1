@@ -1,2 +1,2 @@
 # SEMAINE1
-exercice de resumer de la semaine django
+## exercice de maison sur le resumer de la semaine 1
