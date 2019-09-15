@@ -1,13 +1,16 @@
 ### SEMAINE_1 : exercice de maison sur le resumer de la semaine 1
 # THEME : QUIZ
 
-### Models:
+### Models :
    * Users
    * Theme
    * Quiz
    * Question
    * Reponse
    * Note
+   
+### Creation des champs des Models:
+
 
 
 
