@@ -12,7 +12,9 @@
    
 ### Creation des champs des Models :
 ```django
-
+   class Users:
+      "" Class Users de Django ""
+   
 
 
 
