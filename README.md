@@ -11,7 +11,7 @@
    * Note
    
 ### Creation des champs des Models :
-```bash
+```Django
    class Users:
       "" Class Users de Django ""
    
