@@ -40,6 +40,7 @@
     date_add = models.DateTimeField(auto_now_add=True)
     date_upd = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True)
+    image_theme = models.ImageField(upload_to='question', blank=True)
     quiz_id  = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='quiz_question')
         
  class Reponse(models.Model):
