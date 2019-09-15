@@ -32,24 +32,23 @@
      note_validation = models.IntegerField(max_length=3)
      date_add = models.DateTimeField(auto_now_add=True)
      date_upd = models.DateTimeField(auto_now=True)
-     duree = models.DurationField()
+     temps = models.DurationField()
      theme_id = models.ForeignKey(Theme,on_delete=models.CASCADE, related_name='theme_quiz')
      
   class Question(models.Model):
-        enoncet = models.TextField()
-        date_add = models.DateTimeField(auto_now_add=True)
-        date_upd = models.DateTimeField(auto_now=True)
-        status = models.BooleanField(default=True)
-        quiz_id  = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='quiz_question')
+     enoncet = models.TextField()
+     date_add = models.DateTimeField(auto_now_add=True)
+     date_upd = models.DateTimeField(auto_now=True)
+     status = models.BooleanField(default=True)
+     quiz_id  = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='quiz_question')
         
  class Reponse(models.Model):
-       reponse = models.TextField()
-       point = models.IntegerField(max_length=2)
-       date_add = models.DateTimeField(auto_now_add=True)
-       date_upd = models.DateTimeField(auto_now=True)
-       status = models.BooleanField(default=True)
-       question_id = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='question_reponse')
-       
+    reponse = models.TextField()
+    point = models.IntegerField(max_length=2)
+    date_add = models.DateTimeField(auto_now_add=True)
+    date_upd = models.DateTimeField(auto_now=True)
+    status = models.BooleanField(default=True)
+    question_id = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='question_reponse')
        
        
 
