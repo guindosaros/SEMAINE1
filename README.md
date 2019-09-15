@@ -11,7 +11,8 @@
    * Note
    
 ### Creation des champs des Models :
-```Django
+```python
+
    class Users:
       "" Class Users de Django ""
    
