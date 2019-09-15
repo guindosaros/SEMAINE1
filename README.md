@@ -41,9 +41,7 @@
         date_upd = models.DateTimeField(auto_now=True)
         status = models.BooleanField(default=True)
         quiz_id  = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='question_du_quiz')
-     
         
-     
  class Reponse(models.Model):
        reponse = models.TextField()
        point = models.IntegerField(max_length=2)
