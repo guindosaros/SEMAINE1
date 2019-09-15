@@ -22,7 +22,7 @@
    status = models.BooleanField(default=True)
    date_add =  models.DateTimeField(auto_now_add=True)
    date_upd =  models.DateTimeField(auto_now=True)
-   image_theme = models.ImageField(upload_to='theme', blank=True)
+   image_theme = models.ImageField(upload_to='theme')
      
   class Quiz(models.Model):
     titre =  models.CharField( max_length = 100 )
@@ -33,7 +33,7 @@
     date_add = models.DateTimeField(auto_now_add=True)
     date_upd = models.DateTimeField(auto_now=True)
     temps = models.DurationField()
-    theme_id = models.ForeignKey(Theme,on_delete=models.CASCADE, related_name='theme_quiz')
+    theme_id = models.ForeignKey(Themes,on_delete=models.CASCADE, related_name='theme_quiz')
      
   class Questions (models.Model):
     enoncet = models.TextField()
@@ -54,7 +54,7 @@
 class Notes (models.Model):
   note_totale = models.IntegerField(max_length=3)
   user_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='user_note')
-  quiz_id = models.ForeignKey(User,on_delete=models.CASCADE, related_name='quiz_resultat')
+  quiz_id = models.ForeignKey(Quiz,on_delete=models.CASCADE, related_name='quiz_resultat')
   a_valider = models.BooleanField(default=False)
   date_add = models.DateTimeField(auto_now_add=True)
   date_upd = models.DateTimeField(auto_now=True)
